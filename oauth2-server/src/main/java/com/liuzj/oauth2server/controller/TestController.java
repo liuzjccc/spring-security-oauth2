@@ -27,4 +27,10 @@ public class TestController {
         return "home";
     }
 
+    @RequestMapping("/login")
+    public String login(String username, String password) {
+        System.out.println("username=" + username + ",password=" + password);
+        return "登录页面";
+    }
+
 }

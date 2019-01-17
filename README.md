@@ -29,3 +29,6 @@
 > ##### 客户端拿到 code 去换取 access_token (post):
 >> http://localhost:8001/oauth/token?client_id=client&client_secret=123456&grant_type=authorization_code&redirect_uri=http://www.baidu.com&code=AKAQUe
 > ##### 客户端拿到 access_token 去访问资源:
+#### 三、自定义 Filter 或者 Handler
+> ##### Filter 包括实现 javax.servlet 的 Filter,也可以继承 spring security 的类；前者只能通过 addFilterBefore\addFilterAfter\addFilterAt 加入拦截器链，后者可以直接通过 addFilter
+> ##### Spring security 有很多 handler 通过自定义一些 handler 来处理一下成功或者失败的返回。比如：实现 AuthenticationFailureHandler 来自定义认证失败后的结果处理以及返回。
